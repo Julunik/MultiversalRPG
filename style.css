@@ -1,0 +1,248 @@
+@font-face
+{
+    font-family: 'Julunik';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Julunik'), url('files/orange-kid.otf') format('truetype');
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-image: url('files/background.png');
+    font-family: 'Julunik', serif;
+
+    animation: backgroundMove 10s linear infinite normal;
+}
+
+.title
+{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 300%;
+
+    animation: ColorChanger 10s linear infinite normal;
+}
+
+.icon
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    transition: width .3s;
+    cursor: pointer;
+}
+
+.icon:hover
+{
+    width: 150px;
+}
+
+a.button
+{
+    color: rgba(255, 255, 255, 1);
+    display: block;
+    font-size: 110%;
+    text-decoration: none;
+    text-align: center;
+    user-select: none;
+    border: 2px rgba(255, 255, 255, 0) solid;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+
+    width: 200px;
+    height: 50px;
+
+    transition: box-shadow .3s, background-color .5s;
+
+    margin: auto;
+    padding: 10px;
+}
+
+a.button:hover {
+    box-shadow: 0 0 11px black;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.stopka
+{
+    color: black;
+    width: 100%;
+    float: left;
+    text-align: center;
+
+    animation: ColorChanger 10s linear infinite normal;
+}
+
+.dczaproszenie
+{
+    color: blue;
+    font-size: 110%;
+    text-decoration: none;
+}
+
+.dczaproszenie:hover
+{
+    text-decoration: underline;
+}
+
+.tipplydonate
+{
+    color: #027502;
+    font-size: 110%;
+    text-decoration: none;
+}
+
+.tipplydonate:hover
+{
+    text-decoration: underline;
+}
+
+.youtubejs
+{
+    color: #D04648;
+    font-size: 110%;
+    text-decoration: none;
+}
+
+.youtubejs:hover
+{
+    text-decoration: underline;
+}
+
+.pobrania
+{
+    color: black;
+    font-size: 110%;
+    text-align: center;
+    display: inline-block;
+    user-select: none;
+}
+
+.downloads
+{
+    position: absolute;
+    user-select: none;
+    transform: translate(-5px, 1px);
+}
+
+@keyframes backgroundMove
+{
+    0%
+    {
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+
+    100%
+    {
+        background-position-x: -946px;
+        background-position-y: 530px;
+    }
+}
+/* @keyframes backgroundMove
+{
+    0%
+    {
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+
+    50%
+    {
+        background-position-x: -300px;
+        background-position-y: 300px;
+    }
+
+    55%
+    {
+        background-position-x: -300px;
+        background-position-y: 300px;
+    }
+
+    95%
+    {
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+
+    100%
+    {
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+} */
+
+@keyframes IconMove
+{
+    0%
+    {
+        width: 120px;
+    }
+
+    50%
+    {
+        width: 100px;
+    }
+
+    100%
+    {
+        width: 120px;
+    }
+}
+
+@keyframes ColorChanger
+{
+    /* 1 = 0%, 2 = 12%, 3 = 24%, 4 = 36%, 5 = 48%, 6 = 60%, 7 = 72%, 8 = 84%, 9 = 96% */
+    0%
+    {
+        color: red;
+    }
+
+    12%
+    {
+        color: orange;
+    }
+
+    24%
+    {
+        color: yellow;
+    }
+
+    36%
+    {
+       color: greenyellow; 
+    }
+
+    48%
+    {
+        color: aqua;
+    }
+
+    60%
+    {
+       color: blue; 
+    }
+
+    72%
+    {
+        color: purple;
+    }
+
+    84%
+    {
+        color: violet;
+    }
+
+    100%
+    {
+        color: red;
+    }
+}
